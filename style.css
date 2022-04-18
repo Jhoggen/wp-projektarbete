@@ -1,0 +1,106 @@
+/*
+Theme Name: Möbeljätten
+Text Domain: wp-projektarbete
+Author: Möbeljätten AB
+Version: 1.0
+Description: Gött änna!
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: rgba(0, 0, 0, 0.668);
+    
+    text-decoration-thickness: 1px;
+    text-underline-offset: 8px;
+}
+.logo:hover {
+    text-decoration: none;
+}
+
+
+
+.header-top-menu-container {
+    display: flex;
+    top:0px
+    
+}
+
+.header-top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+   
+}
+
+.top-menu-col {
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    width: 33%;
+}
+
+
+/* ul list in bottom nav */
+.header-bottom-nav{ 
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 1rem;
+}
+
+.header-bottom-nav li{
+    padding: 0px 10px;
+}
+.menu-header-navbar-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: oldlace;
+    
+}
+img.wc-block-grid__product-image__image {
+    width: 200px !important;
+    height: 200px !important;
+}
+.test{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+@media only screen and (max-width: 768px) {
+    body{
+        background-color: orange;
+    }
+    .header-top-menu-container{
+        align-items: center;
+    }
+    .header-top-menu {
+        flex-direction: column;
+    }
+    .top-menu-col{
+        width: 100%;
+    }
+    .top-menu-col:first-child {
+        order: 2;
+    }
+    .top-menu-col:nth-child(2) {
+        order: 1;
+    }
+    .top-menu-col:nth-child(3) {
+        order: 3;
+    }
+  }
