@@ -1,0 +1,14 @@
+------------------------------------------
+14-18/4 
+
+* footer.php grunder
+* header.php grunder
+*functions.php tillägg av menyer, widgets, och en test funktion att man kallar på efter produktens id
+* home.php en liten loop bara
+*font-page.php = lite grunder med start sidan
+* css, byggt upp lite css för header och footer 
+
+----- wp-admin ----
+Lagt till lite konten på start sidan, lagt in lite text i widgets 
+
+------------------------------------------
