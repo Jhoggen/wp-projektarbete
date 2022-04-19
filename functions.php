@@ -1,5 +1,9 @@
 <?php
 
+// include scripts
+include('enqueue.php');
+// 
+
 /* --------Registers theme support for a given feature. ------------ */
 
 add_theme_support('post-thumbnails'); 
@@ -42,34 +46,8 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 /* ---------------------------------------------------------------------- */
 
-function wpbootstrap_enqueue_styles() {
-    wp_enqueue_style( 'bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' );
-    wp_enqueue_style( 'my-style', get_template_directory_uri() . '/style.css');
-    }
-    add_action('wp_enqueue_scripts', 'wpbootstrap_enqueue_styles');
-
-/* ------------------------------------ */
-
-function add_theme_scripts() {
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
-    
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), '1.1', 'all');
-
-    wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.css', array(), '1.1', 'all');
-    
-    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.js', array ( 'jquery' ), 1.1, true);
-
-    wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js', array ( 'jquery' ), 1.1, true);
-    
-      if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-        wp_enqueue_script( 'comment-reply' );
-      }
-}
-
-add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 
-/* ------------------------------------ */
 /* -------------Sidebar widgets-------------------- */
 
 
@@ -189,7 +167,54 @@ function wpb_demo_shortcode_2($attr) {
     }
 }
 // Register shortcode
-add_shortcode('my_ad_code', 'wpb_demo_shortcode_2'); 
+add_shortcode('my_ad_code', 'wpb_demo_shortcode_2');
 
+
+
+// Custom sidor för att göra lista till fysiska butikerna-----
+
+function custom_post_type_for_physical_stores()
+{
+
+    $args = array(
+
+            'labels' => array(
+                'name' => 'Fysiska Butiker',
+                'singular_name' => 'Fysisk Butik',
+        ),
+        
+        'hierarchical' => true,
+        'public' => true,
+        'has-archive' => true,
+        'menu-icon' => 'dashicons-store',
+        'supports' => array('title', 'editor', 'thumbnail'),
+    );
+
+    register_post_type('Fysiska Butiker', $args);
+}
+add_action('init', 'custom_post_type_for_physical_stores');
+
+
+//lägg till kategorier till store-list-----------------------
+function physical_store_taxonomy() 
+{
+
+        $args = array(
+                'labels' => array(
+                    'name' => 'Städer',
+                    'singular_name' => 'Stad',
+                ),
+
+                'hierarchical' => true,
+                'public' => true,
+
+        );
+
+        register_taxonomy('Städer', array('Fysiska Butiker'), $args);
+
+}
+add_action('init', 'physical_store_taxonomy');
+
+// ----------------------------------------------------------
 
 ?>
