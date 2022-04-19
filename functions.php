@@ -179,18 +179,18 @@ function custom_post_type_for_physical_stores()
     $args = array(
 
             'labels' => array(
-                'name' => 'Fysiska Butiker',
-                'singular_name' => 'Fysisk Butik',
+                'name' => 'fysiskabutiker',
+                'singular_name' => 'fysiskbutik',
         ),
         
         'hierarchical' => true,
         'public' => true,
-        'has-archive' => true,
-        'menu-icon' => 'dashicons-store',
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-store',
         'supports' => array('title', 'editor', 'thumbnail'),
     );
 
-    register_post_type('Fysiska Butiker', $args);
+    register_post_type('fysiskabutiker', $args);
 }
 add_action('init', 'custom_post_type_for_physical_stores');
 
@@ -201,7 +201,7 @@ function physical_store_taxonomy()
 
         $args = array(
                 'labels' => array(
-                    'name' => 'Städer',
+                    'name' => 'Stader',
                     'singular_name' => 'Stad',
                 ),
 
@@ -210,7 +210,7 @@ function physical_store_taxonomy()
 
         );
 
-        register_taxonomy('Städer', array('Fysiska Butiker'), $args);
+        register_taxonomy('Stader', array('Fysiska_Butiker'), $args);
 
 }
 add_action('init', 'physical_store_taxonomy');
