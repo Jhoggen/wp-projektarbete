@@ -185,7 +185,11 @@ function custom_post_type_for_physical_stores()
         
         'hierarchical' => true,
         'public' => true,
+        'publicly_queryable' => true,
+        'show_in_rest' => true,
         'has_archive' => true,
+        'capability_type' => 'post',
+        'has_archive_string' => '',
         'menu_icon' => 'dashicons-store',
         'supports' => array('title', 'editor', 'thumbnail'),
     );
@@ -196,24 +200,26 @@ add_action('init', 'custom_post_type_for_physical_stores');
 
 
 //lägg till kategorier till store-list-----------------------
-function physical_store_taxonomy() 
-{
+// function physical_store_taxonomy()
+// {
 
-        $args = array(
-                'labels' => array(
-                    'name' => 'Stader',
-                    'singular_name' => 'Stad',
-                ),
+//         $args = array(
 
-                'hierarchical' => true,
-                'public' => true,
+//                 'labels' => array(
+//                     'name' => 'Stader',
+//                     'singular_name' => 'Stad',
+//                     'has_archive' => true,
+//                 ),
 
-        );
+//                 'hierarchical' => true,
+//                 'public' => true,
 
-        register_taxonomy('Stader', array('Fysiska_Butiker'), $args);
+//         );
 
-}
-add_action('init', 'physical_store_taxonomy');
+//         register_taxonomy('Stader', array('fysiskabutiker'), $args);
+
+// }
+// add_action('init', 'physical_store_taxonomy');
 
 // ----------------------------------------------------------
 
