@@ -1,1 +1,6 @@
 04/11 Skapat variabla/enkla produkter med bilder i wordpress varianter kategorier och etiketter.
+------------------------------------------------------------------------------------------------
+04/20 jobbat med CPT och fixat enqueue.php för script och styles. problem att få till hierarkin med CPT för att få ut
+landningsidan.
+-------------------------------------------------------------------------------------------------------
+04/21 CPT landningsidan funkar.
