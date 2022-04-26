@@ -77,9 +77,30 @@ img.wc-block-grid__product-image__image {
     width: 200px !important;
     height: 200px !important;
 }
-.test{
-    margin-left: 10px;
-    margin-right: 10px;
+
+/*-------------test-----------------------*/
+.hero-container-test {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/*---------------home.php---------------------*/
+.magasin-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+}
+.magasin-hero-img {
+   object-fit: cover;
+   width: 100%;
+}
+.magasin-hero-title {
+ 
+        position: relative;
+   
+      
 }
 @media only screen and (max-width: 768px) {
     body{
