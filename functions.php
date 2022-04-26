@@ -179,7 +179,7 @@ function custom_post_type_for_physical_stores()
     $args = array(
 
             'labels' => array(
-                'name' => 'fysiskabutiker',
+                'name' => 'Fysiska Butiker',
                 'singular_name' => 'fysiskbutik',
         ),
         
@@ -222,5 +222,7 @@ add_action('init', 'custom_post_type_for_physical_stores');
 // add_action('init', 'physical_store_taxonomy');
 
 // ----------------------------------------------------------
+
+
 
 ?>
