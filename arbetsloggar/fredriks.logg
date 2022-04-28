@@ -1,5 +1,5 @@
 ------------------------------------------
-14-18/4 
+14-18/4 - 2022
 
 * footer.php grunder
 * header.php grunder
@@ -11,4 +11,20 @@
 ----- wp-admin ----
 Lagt till lite konten på start sidan, lagt in lite text i widgets 
 
+------------------------------------------
+
+------------------------------------------
+26/4 - 2022
+tillägg Smart Coupons for WooCommerce
+Enkel hantering för att kunna lättare placera kuponger
+
+* front-page - 
+
+------------------------------------------
+front page
+fixade till headern 
+installerade ett nytt pluggin Mega menu för responsiv navbar med droppdown
+cuponglösning i widget.
+
+content i frontpage (hem)
 ------------------------------------------
