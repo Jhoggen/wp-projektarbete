@@ -223,6 +223,5 @@ add_action('init', 'custom_post_type_for_physical_stores');
 
 // ----------------------------------------------------------
 
-
-
 ?>
+
