@@ -10,49 +10,66 @@ $email_input = get_field('email_input');
 $butiks_karta = get_field('butiks_karta');
 ?>
 
+<main class="mainContainerFysiskaButiker">      
 
-
-        <?php if ( have_posts() ) {    
-            
-           while ( have_posts() ) {    
-                the_post(); ?>          
-
-                <?php the_content(); ?>    
-
-                
-           <?php } // end while
-             
-        }?> <!-- end the if -->  
+<div class="mainRow">
         
-
         <!-- Titel på sidan -->
         <?php if($title):?>
-        <p><?php echo $title; ?></p>
-        <?php endif; ?>
+        <h1 class="display-4"> <?php echo $title; ?> </h1>
+        <?php endif;  ?>
 
                 <!-- beskrivning -->
                 <?php if($description):?>
-                <?php echo $description; ?>
-                <?php endif; ?>
+                        <p class="textFysiska"> <?php echo $description; ?> </p>
+                        <?php endif; ?>
 
-                <?php if( $bild_butik ) {
-                echo wp_get_attachment_image($bild_butik, $size); 
-                }
-                ?>
+                        <div class="fysiska-img">
+                                <?php if( $bild_butik ) {
+                                echo wp_get_attachment_image($bild_butik, $size);
+                                }
+                                ?>
+                        </div>
+                        <div class="testRow">
+                                        <div class="secondContainer">
+                                                        <!-- öppettider -->
+                                                        <?php if($oppettider): ?>
+                                                        <h2>Öppettider</h2>
+                                                        <div>
+                                                                <?php echo nl2br($oppettider); ?> 
+                                                        </div>
+                                                        <?php endif; ?>
+                                
+                                
+                                                        <!-- email -->
+                                                        <?php if($email_input):?>
+                                                                
+                                                                <h2>Email</h2>
+                                                        <div> <a href="mailto:<?php echo $email_input;?>"> <?php echo $email_input; ?> </a> </div>
+                                                        
+                                                        <?php endif; ?>
+                                        </div>
+                        
+                                        <div class="thirdContainer">
+                        
+                                                <?php if ( have_posts() ) {    
+                                        
+                                                        while ( have_posts() ) {    
+                                                        the_post(); ?>          
+                                
+                                                        <?php the_content(); ?>    
+                                
+                                                
+                                                <?php } // end while
+                                        
+                                                }?> <!-- end the if -->  
+                                        </div>
+                        </div>
+</div>
 
-                <!-- öppettider -->
-                <?php if($oppettider): ?>
-                <h2>Öppettider</h2>
-                <?php echo nl2br($oppettider); ?>
-                <?php endif; ?>
-
-
-                <!-- email -->
-                <?php if($email_input):?>
-                        <h2>Email</h2>
-                <a href="mailto:<?php echo $email_input;?>"> <?php echo $email_input; ?> </a>
-                <?php endif; ?>
-
+        
+        
+</main>
 
 <?php get_footer(); ?>
 
