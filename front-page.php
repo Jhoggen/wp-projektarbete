@@ -7,9 +7,8 @@
             
            while ( have_posts() ) {    
                 the_post(); ?>          
-                <div class="g-col-6 g-col-md-4">     
                         <?php the_content(); ?>    
-                </div>    
+                
                 
             <?php } // end while
              

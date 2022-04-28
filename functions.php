@@ -52,22 +52,35 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 
 function wpprojektarbete_widgets_init() {
+    /* --header coupon menu -- */
+    register_sidebar( array(
+        'name'          => __( 'Coupon Header: Top-left', 'wpprojektarbete' ),
+        'id'            => 'coupon-header-top-left',
+        'before_widget' => '<div class="top-coupon-col-left">',
+        'after_widget'  => '</div>',
+    
+    ) );
+    register_sidebar( array(
+        'name'          => __( 'Coupon Header: Top-right', 'wpprojektarbete' ),
+        'id'            => 'coupon-header-top-right',
+        'before_widget' => '<div class="top-coupon-col-right">',
+        'after_widget'  => '</div>',
+    ) );
     /* --header nav menu -- */
     register_sidebar( array(
         'name'          => __( 'Header: Top-left', 'wpprojektarbete' ),
         'id'            => 'header-top-left',
-        'before_widget' => '<ul id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</ul>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'label'          => '',
+
     ) );
     register_sidebar( array(
         'name'          => __( 'Header: Top-right', 'wpprojektarbete' ),
         'id'            => 'header-top-right',
-        'before_widget' => '<ul id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</ul>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
+        'before_widget' => '',
+        'after_widget'  => '',
+
     ) );
 
     /* --footer top sidebar -- */
