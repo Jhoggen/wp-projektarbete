@@ -222,18 +222,3 @@ add_action('init', 'custom_post_type_for_physical_stores');
 // add_action('init', 'physical_store_taxonomy');
 
 // ----------------------------------------------------------
-
-
-// Method 1: Filter.
-function my_acf_google_map_api( $api ){
-    $api['key'] = 'AIzaSyBBT39edybXk2hKc8BNr-4kw16YwJ52kMA';
-    return $api;
-}
-add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-
-// Method 2: Setting.
-function my_acf_init() {
-    acf_update_setting('google_api_key', 'AIzaSyBBT39edybXk2hKc8BNr-4kw16YwJ52kMA');
-}
-add_action('acf/init', 'my_acf_init');
-?>
