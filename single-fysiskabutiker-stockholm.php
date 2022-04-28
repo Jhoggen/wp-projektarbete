@@ -10,48 +10,60 @@ $email_input = get_field('email_input');
 $butiks_karta = get_field('butiks_karta');
 ?>
 
+<main class="mainContainerFysiskaButiker">      
+
+<div class="mainRow">
 
 
-        <?php if ( have_posts() ) {    
-            
-           while ( have_posts() ) {    
-                the_post(); ?>          
-
-                <?php the_content(); ?>    
-
-                
-           <?php } // end while
-             
-        }?> <!-- end the if -->  
         
 
         <!-- Titel på sidan -->
         <?php if($title):?>
-        <p><?php echo $title; ?></p>
+        <h1><?php echo $title; ?></h1>
         <?php endif; ?>
 
                 <!-- beskrivning -->
                 <?php if($description):?>
-                <?php echo $description; ?>
+                <p><?php echo $description; ?></p>
                 <?php endif; ?>
 
-                <?php if( $bild_butik ) {
-                echo wp_get_attachment_image($bild_butik, $size); 
-                }
-                ?>
+                        <div class="fysiska-img">
+                                <?php if( $bild_butik ) {
+                                echo wp_get_attachment_image($bild_butik, $size); 
+                                }
+                        ?>
+                        </div>
 
-                <!-- öppettider -->
-                <?php if($oppettider): ?>
-                <h2>Öppettider</h2>
-                <?php echo nl2br($oppettider); ?>
-                <?php endif; ?>
-
-
-                <!-- email -->
-                <?php if($email_input):?>
-                        <h2>Email</h2>
-                <a href="mailto:<?php echo $email_input;?>"> <?php echo $email_input; ?> </a>
-                <?php endif; ?>
+                <div class="testRow">
+                        <div class="secondContainer">        
+                                <!-- öppettider -->
+                                <?php if($oppettider): ?>
+                                <h2>Öppettider</h2>
+                                <?php echo nl2br($oppettider); ?>
+                                <?php endif; ?>
 
 
+                                <!-- email -->
+                                <?php if($email_input):?>
+                                        <h2>Email</h2>
+                                <div><a href="mailto:<?php echo $email_input;?>"> <?php echo $email_input; ?> </a></div>
+                                <?php endif; ?>
+
+                                </div>
+
+                        <div class="thirdContainer">        
+                                <?php if ( have_posts() ) {    
+                        while ( have_posts() ) {    
+                                the_post(); ?>          
+                
+                                <?php the_content(); ?>    
+                
+                                
+                        <?php } // end while
+                        
+                        }?> <!-- end the if -->  
+                        </div>
+                </div>
+</div>     
+</main>
 <?php get_footer(); ?>
