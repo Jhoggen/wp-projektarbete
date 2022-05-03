@@ -1,6 +1,6 @@
 
 <footer class="bg-dark">
-    <div class="container">
+    <div class="container" class="container-footer-height">
         <div class="row"  style="top: 4%;">
             <!--  Footer: top-kolum 1 -->
             <div class="col text-white" >
