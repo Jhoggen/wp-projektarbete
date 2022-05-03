@@ -485,6 +485,7 @@ img.wc-block-grid__product-image__image {
     padding: 3%;
     background-color: rgba(255, 237, 192, 0.748);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
 
 /* -----------------Kontakt sidan --------------------------*/
 
@@ -698,6 +699,7 @@ img.wc-block-grid__product-image__image {
     }
     .woocommerce-checkout-payment{
         padding: 0 4%;
+    }
 
     .huvudkontor-karta-kontakt iframe{
         width: 100%;
@@ -728,7 +730,6 @@ img.wc-block-grid__product-image__image {
 
     .card-spot{
         padding-left: 15px;
-
     }
   }
 
