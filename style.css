@@ -22,6 +22,16 @@ a {
     color: black;
     text-decoration: none;
 }
+
+.bg-dark a {
+    color: white;
+}
+
+.bg-dark {
+    margin-top: 60px;
+    padding-top: 30px;
+}
+
 a:hover {
     color: rgba(0, 0, 0, 0.668);
     text-decoration: none;
@@ -181,10 +191,18 @@ img.wc-block-grid__product-image__image {
     width: 200px !important;
     height: 200px !important;
 }
+
 .wp-block-latest-posts__featured-image img {
     max-height: 100% !important;
     max-width: 80% !important;
 }
+
+
+.container-footer-height {
+    padding-top: 30px;
+}
+
+
 /*-------------test-----------------------*/
 .hero-container-test {
     position: relative;
@@ -343,6 +361,7 @@ img.wc-block-grid__product-image__image {
     justify-content: space-evenly;
 }
 
+
 /*--------------------BUTIKSIDA------------------------*/
 .site-main {
     padding: 0 8%;
@@ -466,6 +485,116 @@ img.wc-block-grid__product-image__image {
     padding: 3%;
     background-color: rgba(255, 237, 192, 0.748);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+/* -----------------Kontakt sidan --------------------------*/
+
+.huvudkontor-karta-kontakt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.huvudkontor-karta-kontakt h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* ------------------------------------ */
+
+.card-spot-main {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
+    
+}
+
+.spot-container {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    width: 33%;
+    margin: 20px;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.card-spot-mains {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-card-spot {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.card-spot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textClick {
+    font-weight: bold;
+}
+
+.spot-icon {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spot-title {
+    padding-top: 10px;
+}
+
+.spot-details {
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+
+/* contact page */
+
+.kontaktPage h3{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.kontaktPage {
+    display: flex;
+    justify-content: center;
+}
+
+.nf-section {
+    display: flex;
+    justify-content: center;
+}
+
+.fakturaMainDiv {
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+.spot-title-1 {
+    padding-bottom: 10px;
+
 }
 
 .edit {
@@ -569,6 +698,37 @@ img.wc-block-grid__product-image__image {
     }
     .woocommerce-checkout-payment{
         padding: 0 4%;
+
+    .huvudkontor-karta-kontakt iframe{
+        width: 100%;
+        height: 400px;
+    }
+
+    .main-card-spot {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+
+    }
+    
+    .spot-container {
+        margin: 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .spot-action {
+        padding-bottom: 15px;
+    }
+
+    .card-spot{
+        padding-left: 15px;
+
     }
   }
 
