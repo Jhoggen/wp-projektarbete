@@ -26,4 +26,4 @@ if ( have_posts() ) {
       
 }?> <!-- end the if -->
 
-</div>
+<?php get_footer(); ?>

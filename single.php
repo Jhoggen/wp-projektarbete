@@ -17,3 +17,5 @@ if ( have_posts() ) {
     <?php } // end while
      
 }?> <!-- end the if -->  
+
+<?php get_footer(); ?>
