@@ -14,7 +14,10 @@ Description: Gött änna!
     text-decoration: none;
     list-style: none;
 }
-
+.bg-dark {
+    display: flex;
+    width: 100%;
+}
 a {
     color: black;
     text-decoration: none;
@@ -178,7 +181,10 @@ img.wc-block-grid__product-image__image {
     width: 200px !important;
     height: 200px !important;
 }
-
+.wp-block-latest-posts__featured-image img {
+    max-height: 100% !important;
+    max-width: 80% !important;
+}
 /*-------------test-----------------------*/
 .hero-container-test {
     position: relative;
@@ -337,10 +343,149 @@ img.wc-block-grid__product-image__image {
     justify-content: space-evenly;
 }
 
+/*--------------------BUTIKSIDA------------------------*/
+.site-main {
+    padding: 0 8%;
+}
+.woocommerce-loop-product__link img{
+    display: flex !important;
+    width: 250px !important;
+    height: 250px !important;
+    object-fit: contain !important;
+}
 
+.woocommerce-products-header__title {
+    text-align: center;
+}
 
+.woocommerce-breadcrumb{
+    text-align: center;
+    margin: 4% 0 !important;
+}
+
+.content-area {
+    margin-bottom: 10%;
+}
+/*----------CART ------------*/
+.cart-is-empty {
+  
+    text-align: center !important;
+    width: 100% !important;
+    height: 60vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cart-is-empty span {
+    font-size: 100px;
+}
+.shop_table {
+    padding: 0 20%;
+}
+.size-woocommerce_thumbnail {
+    width: 250px !important;
+    height: 250px !important;
+    object-fit: contain;
+}
+.title-cart{
+    width: 100% !important;
+    text-align: center !important;
+    padding: 4% !important;
+}
+#coupon_code {
+    width: auto !important;
+}
+.coupon {
+    display: flex !important;
+}
+.woocommerce .cart .button, .woocommerce .cart input.button {
+    float: none;
+    width: 100%;
+}
+.cart_totals {
+    float: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 40% !important;
+    align-items: center;
+    flex-direction: column;
+}
+.cart-collaterals{
+    display: flex;
+    justify-content: center;
+}
+
+/*-----------------checkout--------------------*/
+#customer_details {
+    padding: 0 20%;
+}
+.woocommerce-checkout-payment{
+    padding: 0 20%;
+}
+#customer_details div:nth-child(1) {
+    max-width: 100% !important;
+    flex: none !important;
+
+}
+#customer_details div:nth-child(2) {
+    max-width: 100% !important;
+    flex: none !important;
+
+}
+
+.woocommerce-input-wrapper {
+    width: 100%;
+    
+}
+#order_review_heading{
+    text-align: center !important;
+    margin: 4% 0px;
+}
+
+.woocommerce-column--billing-address, .woocommerce-column--shipping-address {
+    float: none !important;
+    max-width: 100% !important;
+    flex: none !important;
+}
+
+/*-----------------order received---------------------*/
+.woocommerce-order{
+    padding: 0 20%;
+}
+/* ----------- mina sidor ------------*/
+
+.my-page-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20%;
+    margin-bottom: 4%;
+}
+.woocommerce-MyAccount-navigation {
+    padding: 3%;
+    background-color: rgba(255, 237, 192, 0.748);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.edit {
+    float: none !important;
+    font-weight: bolder;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.289);
+    margin-bottom: 10px !important;
+}
 
 @media only screen and (max-width: 768px) {
+    .woocommerce-result-count{
+        text-align: center;
+        float: none !important;
+    }
+    .woocommerce-ordering {
+        text-align: center;
+        float: none !important;
+        margin-bottom: 2em !important;
+    }
+    
     body{
         background-color: orange;
     }
@@ -381,6 +526,49 @@ img.wc-block-grid__product-image__image {
         width: 100%;
         height: 500px;
     }
+    /*-- butik item card --*/
+    .type-product{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100% !important;
+        
+    }
 
+   
+
+    .top-coupon-col-left p{
+        font-size: 9px !important;
+        padding-left: 4px !important;
+    }
+    .top-coupon-col-right p{
+        font-size: 9px !important;
+        padding-left: 4px !important;
+    }
+
+    .shop_table {
+        padding: 0 !important;
+    }
+    .cart_totals {
+        width: 100% !important;
+    }
+    #customer_details {
+        padding: 0 4%;
+    }
+    .woocommerce-order{
+        padding: 0 4%;
+    }
+    .my-page-container{
+        padding: 0 4%;
+    }
+    .edit{
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+    }
+    .woocommerce-checkout-payment{
+        padding: 0 4%;
+    }
   }
 

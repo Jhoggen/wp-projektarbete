@@ -212,6 +212,16 @@ function custom_post_type_for_physical_stores()
 add_action('init', 'custom_post_type_for_physical_stores');
 
 
+add_action( 'wp', 'bbloomer_remove_sidebar_product_pages' );
+ 
+function bbloomer_remove_sidebar_product_pages() {
+if ( is_product() | is_shop() | is_product_category()) {
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+}
+}
+
+
+
 //lägg till kategorier till store-list-----------------------
 // function physical_store_taxonomy()
 // {
