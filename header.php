@@ -30,7 +30,13 @@
                     <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" ><img class="na" src="https://img.icons8.com/external-kmg-design-basic-outline-kmg-design/32/000000/external-user-back-to-school-kmg-design-basic-outline-kmg-design.png"/></a>
                 </div>
                     <a class="top-menu-row" href="<?php echo get_permalink( get_option('woocommerce_cart_page_id') ); ?>" >
-                        <p>(<?php echo WC()->cart->get_cart_contents_count() ?>)</p>
+                        
+                 
+                        
+                      
+                        
+                       <?php echo WC()->cart->get_cart_contents_count(); ?>
+                        
                         <img src="https://img.icons8.com/windows/32/000000/shopping-basket-2.png"/>
                     </a>
             </div>
