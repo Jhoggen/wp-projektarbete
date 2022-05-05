@@ -17,6 +17,15 @@ Description: Gött änna!
     text-decoration: none;
     list-style: none;
 }
+
+.wp-block-latest-posts__list > li > a {
+    display: none;
+}
+.text-colum-gallery {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
 .bg-dark {
     display: flex;
     width: 100%;
@@ -156,7 +165,7 @@ a:hover {
     width: 100%;
     padding: 2px 23px 2px 30px;
     outline: 0;
-    background-color: #f5f5f563;
+    background-color: white;
     align-items: center;
    
 }
@@ -623,9 +632,7 @@ img.wc-block-grid__product-image__image {
         margin-bottom: 2em !important;
     }
     
-    body{
-        background-color: orange;
-    }
+   
     .header-top-menu-container{
         align-items: center;
     }

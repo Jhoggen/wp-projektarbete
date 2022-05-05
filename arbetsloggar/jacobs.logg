@@ -1,9 +1,13 @@
 04/11 Skapat variabla/enkla produkter med bilder i wordpress varianter kategorier och etiketter.
+la till vikt och längd höjd och fraktklasser men försvann i en databas överföring.
 ------------------------------------------------------------------------------------------------
 04/20 jobbat med CPT och fixat enqueue.php för script och styles. problem att få till hierarkin med CPT för att få ut
 landningsidan.
 -------------------------------------------------------------------------------------------------------
 04/21 CPT landningsidan funkar.
+kodat för CPT i single.php för fält till fysiska butiker.
+problem i början hade 1 single-***.php för varje butik men sen löste vi tillsammans så att det räckte med att bara ha single.php och 
+den känner av vilken som är vilken genom anpassade fält i admin panelen.
 -----------------------------------------------------------------------------------------------
 04/22 (punkt 7) kommit halvägs på fysiska butiker. fått in all information och fält med ACF. inte stylat ännu.
 men allting fungerar.
@@ -13,8 +17,10 @@ men allting fungerar.
 04/28 punk 7 klar
 -------------------------------------------------------
 04/28 (punkt 8)
-05/02 arbetar med layout landningsidan kontakt.
+05/02 arbetar med layout landningsidan kontakt. problem att få till att koppla till archive filen men funkade tillslut.
 05/03 stylar och slutför kontakt/reklamation/retur sidorna.
 05/03 allt klart med kontakt, reklamation och retur sidorna.
+störst problem med att få till css men blev bra tillslut 😄
+--------------------------------------------------------
 05/03 fixat till länkar i footern.
-
+05/04 Skrivit manual för wordpress sidan.
