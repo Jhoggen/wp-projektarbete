@@ -1,30 +1,114 @@
-------------------------------------------
-14-18/4 - 2022
+Frågor som jag gjorde själv med några twist
+1 (ish allt)
+4
+6 ( allt innehåll )
+7(hjälte till med redigering) 
+9
+10
+11
+12
+       
+       
+                Wordpress - adminpanel
+------------------------------------------------------
+Sidor & inlägg
+*************
+innehåll i följande:
+Alla inlägg
+Hem
+Magasin
 
-* footer.php grunder
-* header.php grunder
-*functions.php tillägg av menyer, widgets, och en test funktion att man kallar på efter produktens id
-* home.php en liten loop bara
-*font-page.php = lite grunder med start sidan
-* css, byggt upp lite css för header och footer 
+lite små ändringar i fysiska butiker
 
------ wp-admin ----
-Lagt till lite konten på start sidan, lagt in lite text i widgets 
+                    WooCommerce 
+--------------------------------------------------------
+Frakt
+**************
+Alla fraktklasser (jacob hade gjort men det försvann så då gjorde jag det igen)
+alla leveranssätt
+alla leveranszoner
 
-------------------------------------------
+Moms
+**************
+la in moms så att den fungerade
 
-------------------------------------------
-26/4 - 2022
-tillägg Smart Coupons for WooCommerce
-Enkel hantering för att kunna lättare placera kuponger
+produkter
+**************
+La in vikt, höjd, bredd 
+Fixade lagersaldot till produkt nivå
 
-* front-page - 
+Betalningsmetoder
+***************
+Fixade betalningsmetoderna
 
-------------------------------------------
-front page
-fixade till headern 
-installerade ett nytt pluggin Mega menu för responsiv navbar med droppdown
-cuponglösning i widget.
+kuponger
+***************
+inställningar för kuponger och visning på sidan
 
-content i frontpage (hem)
-------------------------------------------
+
+
+
+                        Kod
+--------------------------------------------------------
+
+
+
+functions
+*************
+<----------------widgets--------------->
+
+<--Fotter-->
+La in widget funktionerna  så att man kan använda dom ifrån adminpanel
+
+<--header-->
+La in funktionerna så att man kan använda dom ifrån adminpanel
+styling
+registering
+----------------------------------------
+
+
+<---------wpb_demo_shortcode_2--------->
+
+kodrad: start 162 slut 183
+Funktionen:
+Man använder [wpb_demo_shortcode_2]
+i block redigeraren för att kalla på Funktionen 
+
+**Denna funktionen är inte i bruk men den går att använda
+
+
+
+plug in
+*************
+<----------------MaxMenu---------------->
+alla inställningar för MaxMenu som skapar våran navbar i headern 
+
+<----------------plugin-test---------------->
+**Gjort hela pluginet själv 
+Plug in för drönare som är baserat på id ifrån leveranssätt som är fast pris (  $rates['flat_rate:10']) 
+
+Funktionen baserar vikten > kg
+i dom tre olika pris klasserna som används i leveranssättet
+
+hade jag haft mer tid hade jag skapat klasserna via plug inet men det fanns ingen tid för det
+Men jag vet hur jag gör ialla fall! :)
+
+<----------------drone-plugin---------------->
+***EJ aktiv Gjort hela pluginet själv 
+
+Detta var första försöket med drönar plug in.
+Jag fick i gång klassen som leveranssätt men jag fick det inte att 
+funka med att ha det vikt baserat.
+
+
+<----------------noob-payment-for-WooCommerce----------->
+Gjort hela pluginet själv 
+Man väljer betalningsmetod frakt och skriver in personnummer.
+
+
+
+
+css
+**************
+Vet inte exakt hur många men det är iallafall Över 650 rader har jag gjort
+stylade alla sidor som hade att göra med WooCommerce m.m

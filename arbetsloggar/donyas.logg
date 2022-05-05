@@ -1,0 +1,17 @@
+---------------------------
+22/4
+footer.html grunder
+------------------------------
+28/4
+villkor.php lagt till lite konten på villkor sidan
+-----------------------------
+30/4
+home.php + bootstrap koder (skapat 5 plogin med kontent, bilder och title)
+
+
+
+single-post.php + bootstrap koder (blog single page som hämtar kontent, bilder och title)
+
+
+
+content-post.php + bootstrap koder (skapat koder som hämtar produkt kategorier i single page)
